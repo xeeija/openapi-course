@@ -1,5 +1,6 @@
 # OpenAPI/Swagger E-learning course
 
-E-learning course on OpenAPI and Swagger as a university project.
+E-learning course on OpenAPI and Swagger as a university project.  
+The course is available at [xeeija.github.io/openapi-course](https://xeeija.github.io/openapi-course/).
 
-The website is built with [Docusaurus](https://docusaurus.io/).
+Built with [Docusaurus](https://docusaurus.io/).

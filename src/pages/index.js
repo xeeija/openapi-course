@@ -28,8 +28,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      // title={`${siteConfig.title}`}
+      description="E-learning course on OpenAPI and Swagger as a university project">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

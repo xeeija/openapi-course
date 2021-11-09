@@ -9,12 +9,12 @@ const config = {
   title: 'OpenAPI/Swagger E-learning Course',
   tagline: 'API design and documentation tooling',
   url: 'https://xeeija.github.io',
-  baseUrl: '/openapi/',
+  baseUrl: '/openapi-course/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: '../img/favicon-openapi.png',
+  favicon: 'img/favicon-openapi.png',
   organizationName: 'xeeija', // Usually your GitHub org/user name.
-  projectName: 'openapi-wfeng', // Usually your repo name.
+  projectName: 'openapi-course', // Usually your repo name.
 
   presets: [
     [
@@ -47,7 +47,7 @@ const config = {
         title: 'OpenAPI/Swagger',
         logo: {
           alt: 'Logo',
-          src: '../img/favicon-openapi.png',
+          src: 'img/favicon-openapi.png',
         },
         items: [
           {
