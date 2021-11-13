@@ -26,50 +26,55 @@ It also has additional fields to define common schemes for:
 
 Here are examples for YAML and JSON format with the same content:
 
-**YAML example**
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
-```yaml
-openapi: 3.0.2
-info: 
-  title: Firebit API
-  version: 1.0.0
-  description: "API for the [Firebit](https://firebit.com) platform, a place to share experiences with your friends"
-  termsOfService: https://firebit.com/tos
-servers:
-  ...
-paths:
-  ...
-```
+<Tabs groupId="openapi-language">
+  <TabItem value="yaml" label="YAML">
 
-**JSON example**
-
-```json
-{
-  "openapi": "3.0.2"
-  "info": {
-    "title": "Firebit API"
-    "version": "1.0.0"
-    "description": "API for the [Firebit](https://firebit.com) platform, a place to share experiences with your friends"
-    "termsOfService": "https://firebit.com/tos"
-  } 
-  servers: [
+  ```yaml
+  openapi: 3.0.2
+  info: 
+    title: Firebit API
+    version: 1.0.0
+    description: "API for the [Firebit](https://firebit.com) platform, a place to share experiences with your friends"
+    termsOfService: https://firebit.com/tos
+  servers:
     ...
-  ]
-  paths: [
+  paths:
     ...
-  ]
-}
-```
+  ```
 
-:::info
+  </TabItem>
+  <TabItem value="json" label="JSON">
 
-As you can see, the YAML version is a bit shorter and (maybe) easier to read, because no `{}` or `"` are necessary.
+  ```json
+  {
+    "openapi": "3.0.2",
+    "info": {
+      "title": "Firebit API",
+      "version": "1.0.0",
+      "description": "API for the [Firebit](https://firebit.com) platform, a place to share experiences with your friends",
+      "termsOfService": "https://firebit.com/tos"
+    },
+    "servers": [
+      ...
+    ],
+    "paths": [
+      ...
+    ],
+  }
+  ```
 
-:::
+  </TabItem>
+</Tabs>
+
+As you can see, the YAML version is a bit shorter and (maybe) easier to read, because no brackets, quotes or commas are necessary.
+
 
 ## Info Object
 
-The Info obejct provides metadata of the API.
+The Info object provides metadata of the API.
 
 It has the fields:
 - **title**: required
@@ -109,3 +114,10 @@ Basically, everything that is used in many places can be defined here once
 and used everywhere else, thus providing a single place to make changes. 
 
 Examples are a `filter` parameter, a "Not Found" response or an authentication method used for multiple operations.
+
+
+:::info Quiz
+
+  You can now do the first quiz "OpenAPI Basics".
+
+:::

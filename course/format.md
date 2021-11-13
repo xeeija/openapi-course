@@ -15,7 +15,7 @@ The OpenAPI (formerly Swagger) specification is basically a JSON or YAML documen
 A YAML version of >= 1.2 is required, as with this version, every JSON document is also a valid YAML document.
 
 It can be either a single file or divided into multiple files.
-When using multiple files, the `$ref` key is used to reference another file (see Reference Object/Schema Object)  
+When using multiple files, the `$ref` key is used to reference another file (see Reference Object/Schema Object).  
 It can be named anything, but the recommended name is `openapi.json` or `openapi.yaml`.
 
 Field names are usually case sensitive, unless it's stated otherwise.
@@ -35,7 +35,7 @@ Altough these are optional, they should be used for documentation purposes.
   
 :::
 
-**#TODO** JSON vs YAML?
+<!-- **#TODO** JSON vs YAML? -->
 
 ## Data Types
 

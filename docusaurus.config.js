@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/openapi-course/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon-openapi.png',
+  favicon: 'img/openapi-course-logo.png',
   organizationName: 'xeeija', // Usually your GitHub org/user name.
   projectName: 'openapi-course', // Usually your repo name.
 
@@ -24,7 +24,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/xeeija/openapi-wfeng/edit/main/',
+          editUrl: 'https://github.com/xeeija/openapi-course/edit/main/',
           path: "course",
           routeBasePath: "course/"
         },
@@ -47,7 +47,7 @@ const config = {
         title: 'OpenAPI/Swagger',
         logo: {
           alt: 'Logo',
-          src: 'img/favicon-openapi.png',
+          src: 'img/openapi-course-logo.png',
         },
         items: [
           {
@@ -57,7 +57,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/xeeija/openapi-wfeng',
+            href: 'https://github.com/xeeija/openapi-course',
             label: 'GitHub',
             position: 'right'
           },

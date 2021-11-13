@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Security
 
-**TODO** intro to security (auth etc)
+**#TODO** intro to security (auth etc)
 
 ### Security Scheme Object
 
@@ -30,3 +30,9 @@ in: header
 ```
 
 For details see https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#security-scheme-object
+
+:::info Quiz
+
+  You can now do the second quiz "OpenAPI Advanced".
+
+:::

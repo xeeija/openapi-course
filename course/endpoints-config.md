@@ -39,7 +39,9 @@ Single request body (payload)
 List of expected responses, based on HTTP status code. Should cover success and known errors, but may not cover all possible status codes.  
 At least one response is required and this should be the success response (200). 
 `default` is used as default when no other status code matches.
-String of the status code, not number, eg. `"200": ...`.
+The status code can be entered either as a number, eg. `200: ...` or as a string, eg. `"200": ...` in YAML, because keys are always strings in YAML.
+In JSON keys need quotes anyway.
+
 
 A response has the fields:
 - **description**: Required, short description
