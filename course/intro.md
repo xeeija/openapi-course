@@ -45,6 +45,6 @@ The following image illustrates the changes from version 2 to 3.
 
 :::warning Compatibility
 
-  Versions 2 and 3 are not compatible with each other, as the version numbers suggest.
+Versions 2 and 3 are not compatible with each other, as the version numbers suggest.
 
 :::

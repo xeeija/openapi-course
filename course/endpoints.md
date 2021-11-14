@@ -10,11 +10,15 @@ This could be data stored in a database or contents of the filesystem.
 An endpoint or resource is usually identified by a **Uniform Resource Identifier** (URI).
 It can be accessed by performing an HTTP request to the server and will recieve an HTTP response back.
 
-The part of the URI that is most interesting for documentation is the path, and possibly query parameters.
+The part of the URI that is most interesting for documentation is the **path**, and possibly query parameters.
 The preceeding part of the URI, protocol and hostname, are usually the same for all resources of an API and thus not that important.
 Besides, the fragment part, which is everything after `#`, is also not interesting to the API, as it is not sent with the HTTP request. 
 
-*Note: Until now, all fields are fixed fields.*
+:::info Note
+
+Until now, all fields are fixed fields.
+
+:::
 
 ## Paths Object
 
@@ -32,22 +36,22 @@ Path variables may also be used in the middle of the path, like `/food/{id}/nutr
 
 Examples of matching URIs are:
 
-```
-/food/watermelon
-/food/banana
-/food/apple/nutrition
-```
+    /food/watermelon
+    /food/banana
+    /food/apple/nutrition
 
 However, a pattern with path variables must be unique.
 The following paths are conflicting with each other.
 
-```
-/food/{name}
-/food/{category}
-```
+    /food/{name}
+    /food/{category}
 
 A request to `/food/orange` could refer to either an orange or to a category of all orange food.
 
+If two paths are defined, where one is a fixed path and the other one has path variables, the fixed path takes precedence.
+
+    /food/all
+    /food/{category}
 
 **Fields**
 
@@ -67,24 +71,22 @@ A path has the following fields:
 
 ## Operation Object
 
-Describes one operation (method) of an API endpoint.
+Each of the HTTP methods above is represented by an Operation object.
+One object describes one operation (method) of an API endpoint.
+Multiple operations can be definied per path, but at least one is required.
+
 It has the following fields:
 
 - **summary**: Short summary of this operation, should be <120 characters
 - **description**: Long description (like details, shown in docs when selected)
 - **parameters**: List of parameters
 - **responses**: Required, list of possible responses
-- **requestBody**: body (payload) of the request, if applicable
+- **requestBody**: body (payload) of the request, if applicable (depends on the method)
+- **security**: List of security schemes to apply (for authorization), only one has to be fulfilled
 
-<!-- 
-- produces: List of content types (MIME types) that the operation result can be
-- consumes: list of content types (MIME types) that the operation takes as body 
-- -->
-
-Additionally:
-- **security**: List of security definitions to apply (for authorization), logical OR
+Additionally, these fields are mainly used for documentation:
 - **deprecated**: Whether the operation should not be used anymore  
-  (not in the spec, but: good practise to specify an alternative)
+  (it is good practise to specify an alternative)
 - **tags**: For organisation/grouping
-- **operationId**: Unique string to identify the operation,  
-  may be used by tools or libraries, so this should follow common naming conventions
+- **operationId**: Unique string to identify the operation.  
+  This may be used by tools or libraries, so this should follow common naming conventions

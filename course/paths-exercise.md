@@ -22,6 +22,9 @@ To practise your new knowledge, your task is to create two API endpoints.
 
 You can use the predefined User schema for this exercise. Insert it in the `schema` like this:
 
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
 <Tabs groupId="openapi-language">
   <TabItem value="yaml" label="YAML">
 
@@ -39,12 +42,9 @@ You can use the predefined User schema for this exercise. Insert it in the `sche
   </TabItem>
 </Tabs>
 
-Copy the code below into the [Online Swagger Editor](https://editor.swagger.io/) or your editor of choice.
+Copy the code below into the [Online Swagger Editor](https://editor.swagger.io/) or your editor of choice and add your endpoints.
 
 <!-- Needs empty lines around markdown, so it is not interpreted as JSX -->
-
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
 
 <Tabs groupId="openapi-language">
   <TabItem value="yaml" label="YAML">

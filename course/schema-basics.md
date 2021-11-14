@@ -21,7 +21,7 @@ The most relevant fields are:
 It also has additional fields to define common schemes for:
 
 - **components**: defines schemas
-- **security**: Security mechanisms that can be used (authentication, authorization), only one is required
+- **security**: Security mechanisms that can be used (authentication, authorization)
 - **webhooks**: possibility to define webhook paths
 
 Here are examples for YAML and JSON format with the same content:
@@ -89,7 +89,7 @@ Don't confuse the `version` of the Info object (version of the API) with the `op
 ## Servers Object
 
 This specifies a single server or list of servers, where the API is hosted.
-Requests sent from the documentation will be sent to the selected server from this object.
+Requests sent from the documentation (like Swagger UI) will be sent to the selected server from this object.
 
 It has the following ields:
 
@@ -98,7 +98,10 @@ It has the following ields:
 
 ## Components Object
 
-In this object, a list of reusable objects of various types can be defined.  
+The components object allows to define objects in a single place and use them in many places.
+
+This object is a list of reusable objects of various types.
+For each type, a field is provided, which is an map with the name as key and the structure as value.
 
 It holds:
 - Schemas
@@ -110,14 +113,62 @@ It holds:
 - SecuritySchemes
 - etc.
 
-Basically, everything that is used in many places can be defined here once 
-and used everywhere else, thus providing a single place to make changes. 
+<!-- Basically, everything that is used in many places can be defined here once 
+and used everywhere else, thus providing a single place to make changes.  -->
 
-Examples are a `filter` parameter, a "Not Found" response or an authentication method used for multiple operations.
+Some examples are a "page" parameter, a "Not Found" response or an authentication method used for multiple operations.
+
+An item in on of the lists is a **Schema object**, which defines the data type of the object.
+
+For example:
+
+<Tabs groupId="openapi-language">
+  <TabItem value="yaml" label="YAML">
+
+  ```yaml
+  #primitive
+  type: integer
+  format: int64
+
+  # object "model"
+  type: object
+  properties:
+    firstname:
+      type: string
+    age:
+      type: integer
+  ```
+
+  </TabItem>
+  <TabItem value="json" label="JSON">
+
+  ```json
+  // primitve
+  {
+    "type": "integer",
+    "format": "int64"
+  }
+
+  // object "model"
+  {
+    "type": "object",
+    "properties": {
+      "firstname": {
+        "type": "string"
+      },
+      "age":{
+        "type": "integer"
+      }
+    }
+  }
+  ```
+
+  </TabItem>
+</Tabs>
 
 
 :::info Quiz
 
-  You can now do the first quiz "OpenAPI Basics".
+You can now do the first quiz "OpenAPI Basics".
 
 :::

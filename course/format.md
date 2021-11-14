@@ -4,10 +4,7 @@ sidebar_position: 1
 
 # Format, Datatypes
 
-import Tabs from '@theme/Tabs'
-import TabItem from '@theme/TabItem'
-
-First, lets go over some basic definitions.
+First, lets go over some basic definitions, what the format looks like and what datatypes are available.
 
 ## Format
 
@@ -31,11 +28,9 @@ Altough these are optional, they should be used for documentation purposes.
 
 :::tip Formatting
 
-  `description` fields usually support Rich Text formatting like Markdown.
+`description` fields usually support Rich Text formatting like Markdown.
   
 :::
-
-<!-- **#TODO** JSON vs YAML? -->
 
 ## Data Types
 
