@@ -66,7 +66,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [],
-        copyright: "Copyright &copy; 2021 Xeeija. Built with Docusaurus."
+        copyright: "OpenAPI/Swagger E-learning course &bull; Copyright &copy; 2021 Xeeija."
       },
       prism: {
         theme: lightCodeTheme,
